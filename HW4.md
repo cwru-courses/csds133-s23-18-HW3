@@ -21,31 +21,44 @@ Answer:
 Answer: 
 
 Let $\Pr(D)$ be probability of having a disease
+
 Let $\Pr(D')$ be probability of not having a disease
-Let $\Pr(P)$ be probability of having pai 
+
+Let $\Pr(P)$ be probability of having pain
+
 Let $\Pr(P')$ be probability of not having pain
+
 Let $\Pr(F)$ be probability of having a fever
+
 Let $\Pr(F')$ be probability of not having a fever
 
 We are given:
+
 $\Pr(P|D)$ = 0.95 (probability of pain given one has the disease)
+
 $\Pr(P|D')$ = 0.10
+
 $\Pr(P|D)$ = 0.90
+
 $\Pr(P|D)$ = 0.05
+
 $\Pr(D)$ = 0.01
 
 We can use Bayes' Theorem to find the probability one has the disease given they have either pain or a fever:
 
 $\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / $\Pr(P)$ 
+
 $\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / ($\Pr(P|D)$ * $\Pr(D)$ + $\Pr(P|D')$ * $\Pr(D')$)
+
 $\Pr(D|P)$ = 0.95 * 0.01 / (0.95 * 0.01 + 0.10 * 0.99) = 0.085
 
 $\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / $\Pr(F)$ 
+
 $\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / ($\Pr(F|D)$ * $\Pr(D)$ + $\Pr(F|D')$ * $\Pr(D')$)
+
 $\Pr(D|F)$ = 0.90 * 0.01 / (0.90 * 0.01 + 0.05 * 0.99) = 0.153
 
 $\Pr(D|F)$ > $\Pr(D|P)$ so fever is a better indicator of the disease than pain
-
 
 5.  An exam consists of multiple choice questions, each with six choices. A student has a degree of belief 0.8 they will know the answer to a question. If they do not, they intend to pick one of the five choices at random, with each choice being equally likely to be picked. What is the probability they will correctly answer a question?
 
