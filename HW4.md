@@ -48,13 +48,13 @@ We can use Bayes' Theorem to find the probability one has the disease given they
 
 $\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / $\Pr(P)$ 
 
-$\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / ($\Pr(P|D)$ * $\Pr(D)$ + $\Pr(P|D')$ * $\Pr(D')$ )
+$\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / ($\Pr(P|D)$ * $\Pr(D)$ + $\Pr(P|D')$ * $\Pr(D')$)
 
 $\Pr(D|P)$ = 0.95 * 0.01 / (0.95 * 0.01 + 0.10 * 0.99) = 0.085
 
 $\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / $\Pr(F)$ 
 
-$\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / ($\Pr(F|D)$ * $\Pr(D)$ + $\Pr(F|D')$ * $\Pr(D')$ )
+$\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / ($\Pr(F|D)$ * $\Pr(D)$ + $\Pr(F|D')$ * $\Pr(D')$)
 
 $\Pr(D|F)$ = 0.90 * 0.01 / (0.90 * 0.01 + 0.05 * 0.99) = 0.153
 
@@ -64,9 +64,33 @@ $\Pr(D|F)$ > $\Pr(D|P)$ so fever is a better indicator of the disease than pain
 
 Answer: 
 
+$\Pr(Know)$ = 0.8
+
+$\Pr(Guess)$ = 0.2
+
+If the student knows the answer, then they will answer correctly with probability 1.0. If they don't know the answer and guess, then they will answer correctly with probability 1/5, since there are 5 choices remaining. The overall probability of a correct answer is:
+
+$\Pr(Correct)$ = $\Pr(Know)$ * 1.0 + $\Pr(Guess)$ * 0.2
+
+$\Pr(Correct)$ = 0.8 * 1.0 + 0.2 * 0.2
+
+$\Pr(Correct)$ = 0.84
+
+The probability that the student will correctly answer a question is 0.84 given a degree of belief of 0.8.
+
 6. A square of side 1 meter is drawn on a board, and a circle of radius 0.5m is inscribed within it. A dart is thrown at the board so that the dart is equally likely to land at any point in the square. What is the probability the dart lands somewhere within the circle?
 
 Answer: 
+
+A(Square) = 1^2 = 1
+
+A(Circle) = pi(0.5)^2 = 0.7854
+
+The probability of the dart landing within the circle is equal to the ratio of the area of the circle to the area of the square.
+
+0.7854/1 = 0.7854
+
+The probability of the dart landing within the circle given that it is equally likely to land anywhere with the square is 78.54%.
 
 7. For two events $A$ and $B$, $\Pr(A)=0.5$, $\Pr(B)=0.3$, $\Pr(A \cap B)=0.1$. Find $\Pr(A \cap B|A \cup B)$.
 
