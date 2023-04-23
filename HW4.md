@@ -20,17 +20,7 @@ Answer:
 
 Answer: 
 
-Let $\Pr(D)$ be probability of having a disease
-
-Let $\Pr(D')$ be probability of not having a disease
-
-Let $\Pr(P)$ be probability of having pain
-
-Let $\Pr(P')$ be probability of not having pain
-
-Let $\Pr(F)$ be probability of having a fever
-
-Let $\Pr(F')$ be probability of not having a fever
+Let $\Pr(D)$ be probability of having a disease, $\Pr(D')$ be probability of not having a disease, $\Pr(P)$ be probability of having pain, $\Pr(P')$ be probability of not having pain, $\Pr(F)$ be probability of having a fever, and $\Pr(F')$ be probability of not having a fever
 
 We are given:
 
@@ -64,9 +54,9 @@ $\Pr(D|F) > \Pr(D|P)$ so fever is a better indicator of the disease than pain
 
 Answer: 
 
-$\Pr(Know) = 0.8$
+Given: 
 
-$\Pr(Guess) = 0.2$
+$\Pr(Know) = 0.8$ and $\Pr(Guess) = 0.2$
 
 If the student knows the answer, then they will answer correctly with probability 1.0. If they don't know the answer and guess, then they will answer correctly with probability 1/5, since there are 5 choices remaining. The overall probability of a correct answer is:
 
