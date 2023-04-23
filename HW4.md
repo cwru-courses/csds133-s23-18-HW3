@@ -100,21 +100,21 @@ Use Bayes' Theorem:
 
 $\Pr(A \cap B|A \cup B) = (\Pr(A \cup B|A \cap B) * \Pr(A \cap B)) / \Pr(A \cup B)$
 
-Expand the numerator using the distributive law:
+Simplify the numerator using the formula for conditional probability:
 
-$\Pr(A \cap B|A \cup B) = (\Pr((A \cap B \cap A) \cup (A \cap B \cap B)) / \Pr(A \cup B))$
+$\Pr(A \cup B|A \cap B) = \Pr(A \cup B) \cap (A \cap B) / \Pr(A \cap B)$
 
-Since $A \cap B \subseteq A$ and $A \cap B \subseteq B$, simplify numerator:
+Since $A \cap B \subseteq A \cup B$, simplify to:
 
-$\Pr(A \cap B|A \cup B) = (\Pr(A \cap B) / \Pr(A \cup B))$
+$\Pr(A \cup B|A \cap B) = \Pr(A \cap B) / \Pr(A \cap B) = 1$
 
-Since $Pr(A \cup B) \subseteq Pr(A) + Pr(B) - Pr(A \cap B)$, simplify denominator:
+Simplify the denominator using $\Pr(A \cup B) = \Pr(A) + \Pr(B) - \Pr(A \cap B)$:
 
-$\Pr(A \cap B|A \cup B) = (\Pr(A \cap B) / \Pr(A) + \Pr(B) - \Pr(A \cap B))$
+$\Pr(A \cap B|A \cup B) = ((\Pr(A \cup B|A \cap B) * \Pr(A \cap B)) / \Pr(A) + \Pr(B) - \Pr(A \cap B))$
 
 Plug in given values:
 
-$\Pr(A \cap B|A \cup B) = 0.1 / (0.5 + 0.3 - 0.1) = 0.1 / 0.7 = 0.143$
+$\Pr(A \cap B|A \cup B) = (1 * 0.1) / (0.5 + 0.3 - 0.1) = 0.1 / 0.7 = 0.143$
 
 The probability of $\Pr(A \cap B|A \cup B)$ is approximately $0.143$.
 
