@@ -48,13 +48,13 @@ We can use Bayes' Theorem to find the probability one has the disease given they
 
 $\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / $\Pr(P)$ 
 
-$\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / ($\Pr(P|D)$ * $\Pr(D)$ + $\Pr(P|D')$ * $\Pr(D')$)
+$\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / ($\Pr(P|D)$ * $\Pr(D)$ + $\Pr(P|D')$ * $\Pr(D')$ )
 
 $\Pr(D|P)$ = 0.95 * 0.01 / (0.95 * 0.01 + 0.10 * 0.99) = 0.085
 
 $\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / $\Pr(F)$ 
 
-$\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / ($\Pr(F|D)$ * $\Pr(D)$ + $\Pr(F|D')$ * $\Pr(D')$)
+$\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / ($\Pr(F|D)$ * $\Pr(D)$ + $\Pr(F|D')$ * $\Pr(D')$ )
 
 $\Pr(D|F)$ = 0.90 * 0.01 / (0.90 * 0.01 + 0.05 * 0.99) = 0.153
 
@@ -82,19 +82,27 @@ The probability that the student will correctly answer a question is 0.84 given 
 
 Answer: 
 
-A(Square) = 1^2 = 1
+$A(Square) = 1^2 = 1$
 
-A(Circle) = pi(0.5)^2 = 0.7854
+$A(Circle) = pi(0.5)^2 = 0.7854$
 
 The probability of the dart landing within the circle is equal to the ratio of the area of the circle to the area of the square.
 
-0.7854/1 = 0.7854
+$0.7854/1 = 0.7854$
 
 The probability of the dart landing within the circle given that it is equally likely to land anywhere with the square is 78.54%.
 
 7. For two events $A$ and $B$, $\Pr(A)=0.5$, $\Pr(B)=0.3$, $\Pr(A \cap B)=0.1$. Find $\Pr(A \cap B|A \cup B)$.
 
 Answer: 
+
+Use Bayes' Theorem:
+
+$\Pr(A \cap B|A \cup B) = \Pr(A \cup B|A \cap B) * \Pr(A \cap B) / \Pr(A \cup B)$
+
+$\Pr(A \cup B)$ = $\Pr(A \cap B)$ + $\Pr(A \cap B')$ + $\Pr(A' \cap B)$
+
+Since events $A$ and $B$ not necessarily independent,  
 
 8. Suppose there are three events $A$, $B$, $C$ in a sample space so that $\Pr(A, B, C)>0$. Further we know that $A$ is independent of $B$. Show with an example for $A$, $B$, $C$ that it is not necessary that $A$ is independent of $B$, *given* $C$.
 
