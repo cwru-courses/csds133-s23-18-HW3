@@ -34,47 +34,47 @@ Let $\Pr(F')$ be probability of not having a fever
 
 We are given:
 
-$\Pr(P|D)$ = 0.95 (probability of pain given one has the disease)
+$\Pr(P|D) = 0.95$ (probability of pain given one has the disease)
 
-$\Pr(P|D')$ = 0.10
+$\Pr(P|D') = 0.10$
 
-$\Pr(P|D)$ = 0.90
+$\Pr(P|D) = 0.90$
 
-$\Pr(P|D)$ = 0.05
+$\Pr(P|D) = 0.05$
 
-$\Pr(D)$ = 0.01
+$\Pr(D) = 0.01$
 
 We can use Bayes' Theorem to find the probability one has the disease given they have either pain or a fever:
 
-$\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / $\Pr(P)$ 
+$\Pr(D|P) = \Pr(P|D) * \Pr(D) / \Pr(P)$ 
 
-$\Pr(D|P)$ = $\Pr(P|D)$ * $\Pr(D)$ / ($\Pr(P|D)$ * $\Pr(D)$ + $\Pr(P|D')$ * $\Pr(D')$ )
+$\Pr(D|P) = \Pr(P|D) * \Pr(D) / (\Pr(P|D) * \Pr(D) + \Pr(P|D') * \Pr(D'))$
 
-$\Pr(D|P)$ = 0.95 * 0.01 / (0.95 * 0.01 + 0.10 * 0.99) = 0.085
+$\Pr(D|P) = 0.95 * 0.01 / (0.95 * 0.01 + 0.10 * 0.99) = 0.085$
 
-$\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / $\Pr(F)$ 
+$\Pr(D|F) = \Pr(F|D) * \Pr(D) / \Pr(F)$ 
 
-$\Pr(D|F)$ = $\Pr(F|D)$ * $\Pr(D)$ / ($\Pr(F|D)$ * $\Pr(D)$ + $\Pr(F|D')$ * $\Pr(D')$ )
+$\Pr(D|F) = \Pr(F|D) * \Pr(D) / (\Pr(F|D) * \Pr(D) + \Pr(F|D') * \Pr(D'))$
 
-$\Pr(D|F)$ = 0.90 * 0.01 / (0.90 * 0.01 + 0.05 * 0.99) = 0.153
+$\Pr(D|F) = 0.90 * 0.01 / (0.90 * 0.01 + 0.05 * 0.99) = 0.153$
 
-$\Pr(D|F)$ > $\Pr(D|P)$ so fever is a better indicator of the disease than pain
+$\Pr(D|F) > \Pr(D|P)$ so fever is a better indicator of the disease than pain
 
 5.  An exam consists of multiple choice questions, each with six choices. A student has a degree of belief 0.8 they will know the answer to a question. If they do not, they intend to pick one of the five choices at random, with each choice being equally likely to be picked. What is the probability they will correctly answer a question?
 
 Answer: 
 
-$\Pr(Know)$ = 0.8
+$\Pr(Know) = 0.8$
 
-$\Pr(Guess)$ = 0.2
+$\Pr(Guess) = 0.2$
 
 If the student knows the answer, then they will answer correctly with probability 1.0. If they don't know the answer and guess, then they will answer correctly with probability 1/5, since there are 5 choices remaining. The overall probability of a correct answer is:
 
-$\Pr(Correct)$ = $\Pr(Know)$ * 1.0 + $\Pr(Guess)$ * 0.2
+$\Pr(Correct) = \Pr(Know) * 1.0 + \Pr(Guess) * 0.2$
 
-$\Pr(Correct)$ = 0.8 * 1.0 + 0.2 * 0.2
+$\Pr(Correct) = 0.8 * 1.0 + 0.2 * 0.2$
 
-$\Pr(Correct)$ = 0.84
+$\Pr(Correct) = 0.84$
 
 The probability that the student will correctly answer a question is 0.84 given a degree of belief of 0.8.
 
@@ -98,11 +98,25 @@ Answer:
 
 Use Bayes' Theorem:
 
-$\Pr(A \cap B|A \cup B) = \Pr(A \cup B|A \cap B) * \Pr(A \cap B) / \Pr(A \cup B)$
+$\Pr(A \cap B|A \cup B) = (\Pr(A \cup B|A \cap B) * \Pr(A \cap B)) / \Pr(A \cup B)$
 
-$\Pr(A \cup B)$ = $\Pr(A \cap B)$ + $\Pr(A \cap B')$ + $\Pr(A' \cap B)$
+Expand the numerator using the distributive law:
 
-Since events $A$ and $B$ not necessarily independent,  
+$\Pr(A \cap B|A \cup B) = (\Pr((A \cap B \cap A) \cup (A \cap B \cap B)) / \Pr(A \cup B))$
+
+Since $A \cap B \subseteq A$ and $A \cap B \subseteq B$, simplify numerator:
+
+$\Pr(A \cap B|A \cup B) = (\Pr(A \cap B) / \Pr(A \cup B))$
+
+Since $Pr(A \cup B) \subseteq Pr(A) + Pr(B) - Pr(A \cap B)$, simplify denominator:
+
+$\Pr(A \cap B|A \cup B) = (\Pr(A \cap B) / \Pr(A) + \Pr(B) - \Pr(A \cap B))$
+
+Plug in given values:
+
+$\Pr(A \cap B|A \cup B) = 0.1 / (0.5 + 0.3 - 0.1) = 0.1 / 0.7 = 0.143$
+
+The probability of $\Pr(A \cap B|A \cup B)$ is approximately $0.143$.
 
 8. Suppose there are three events $A$, $B$, $C$ in a sample space so that $\Pr(A, B, C)>0$. Further we know that $A$ is independent of $B$. Show with an example for $A$, $B$, $C$ that it is not necessary that $A$ is independent of $B$, *given* $C$.
 
