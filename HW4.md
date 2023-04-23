@@ -102,7 +102,7 @@ $\Pr(A \cap B|A \cup B) = (\Pr(A \cup B|A \cap B) * \Pr(A \cap B)) / \Pr(A \cup 
 
 Simplify the numerator using the formula for conditional probability:
 
-$\Pr(A \cup B|A \cap B) = \Pr(A \cup B) \cap (A \cap B) / \Pr(A \cap B)$
+$\Pr(A \cup B|A \cap B) = \Pr((A \cup B) \cap (A \cap B)) / \Pr(A \cap B)$
 
 Since $A \cap B \subseteq A \cup B$, simplify to:
 
@@ -122,7 +122,38 @@ The probability of $\Pr(A \cap B|A \cup B)$ is approximately $0.143$.
 
 Answer:
 
+Consider a fair six sided die. Let event $A$ be "roll is an even number", event $B$ be "roll is greater than 3", and event $C$ be "roll is an even number or greater than 3".
+
+$\Pr(A) = 0.5, \Pr(B) = 0.5, \Pr(C) = 0.67$
+
+$\Pr(A | C) = \Pr(A \cap C) / \Pr(C) = (0.5 * 0.67) / 0.67 = 0.5$
+
+$\Pr(B | C) = \Pr(B \cap C) / \Pr(C) = (0.5 * 0.67) / 0.67 = 0.5$
+
+Since $\Pr(A|C) \neq \Pr(A)$ and $\Pr(B|C) \neq \Pr(B)$, we have shown that $A$ can be independent of $B$, but dependent on $B$ given $C$.
+
 9. You witness a night-time hit-and-run accident involving a taxi in Cleveland. All taxis in Cleveland are either red or blue. You state under oath that the taxi was red. Testing shows that, at night, discrimination between red and blue is 75% reliable. 60% of the taxis in Cleveland are blue. What is the most likely color of the taxi you saw?
 
 Answer:
+
+Let $R$ be the event that the taxi is red, $B$ be the event that the taxi is blue, and $W$ be the event that you witness the taxi and state that it is red. Want to find $\Pr(R|W)$.
+
+We are given $\Pr(B) = 0.6$, $\Pr(R) = 0.4$, and the reliability of the test $\Pr(W | R) = 0.75$.
+
+Knowing $\Pr(W | R) = 0.75$, we can infer that $\Pr(W | R') = \Pr(W | B) = 0.25$.
+
+Use Bayes' Theorem:
+
+$\Pr(R | W) = (\Pr(W | R) * \Pr(R)) / \Pr(W)$
+
+Simplify the denominator:
+
+$\Pr(W) = \Pr(W | R) * \Pr(R) + \Pr(W | B) * \Pr(B) = 0.75 * 0.4 + 0.25 * 0.6 = 0.45$
+
+Plug back into original equation:
+
+$\Pr(R | W) = (0.75 * 0.4) / 0.45 = 0.67$
+
+The most likely color of the taxi is red with a probability of $0.67$.
+
 
