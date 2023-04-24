@@ -7,6 +7,33 @@ Note: Questions which ask you to "prove" something often require a general argum
 
 Answer:
 
+To show that $\Pr(A\cup B)=\Pr(A)+\Pr(B)-\Pr(A\cap B)$ using the axioms of probability, start by letting:
+
+
+$A \cup B = (A \cap B’) \cup (A \cap B) \cup (B \cap A’)$
+
+
+Using the axiom of additivity:
+
+
+$\Pr(A\cup B) = \Pr(A\cap B’) + \Pr(A\cap B) + \Pr(B\cap A’)$
+
+
+Let $A = (A\cap B’)\cup (A\cap B)$ and $B = (B\cap A’)\cup (A\cap B)$, therefore:
+
+
+$\Pr(A) = \Pr(A\cap B^c) + \Pr(A\cap B)$ and $\Pr(B) = \Pr(B\cap A^c) + \Pr(A\cap B)$
+
+
+Substituting these into the original equation:
+
+
+$\Pr(A\cup B) = \Pr(A) + \Pr(B) - \Pr(A\cap B)$
+
+
+This equation matches our intuitive analogy of probability-as-area because the left-hand side represents the area of the union of events $A$ and $B$, while the right-hand side represents the sum of the areas of events $A$ and $B$, minus the area of their overlap.
+
+
 2. Explain why it would not violate the axioms of probability for someone to have degrees of beliefs $\Pr(A)=0.4$, $\Pr(B)=0.3$ and $\Pr(A \cup B)=0.5$ for two events $A$ and $B$. 
 
 Answer:
