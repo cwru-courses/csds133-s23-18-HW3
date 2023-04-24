@@ -38,10 +38,38 @@ This equation matches our intuitive analogy of probability-as-area because the l
 
 Answer:
 
+The three axioms of probability require the probability of each event to be non-negative, the probability of the entire sample space $S$ to be equal to 1, and for any two events $A$ and $B$, $\Pr(A \cup B) = \Pr(A) + \Pr(B) - \Pr(A \cap B)$.
+
+
+From the given degrees of belief, we know $\Pr(A) = 0.4 > 0$ and $\Pr(A) = 0.3 > 0$.
+
+
+Since we only are given information for events $A$ and $B$, we do not know the probability of the entire sample space $S$, but  $\Pr(A) + \Pr(B) = 0.4 + 0.3 < 1.0$ so the given information doesn’t violate the axiom.
+
+
+Lastly, we can calculate $\Pr(A \cap B)$:
+
+
+$\Pr(A \cap B) = \Pr(A) + \Pr(B) - \Pr(A \cup B) = 0.4 + 0.3 - 0.5 = 0.2 > 0$
+
+
+The given values do not violate any of the axioms of probability.
+
+
 
 3. If someone had the degrees of belief in question 2 above, what are the possible degrees of belief they might assign to $\Pr(A \cap B)$ without violating the axioms of probability?
 
 Answer: 
+
+
+To find the possible degrees of belief for $\Pr(A \cap B)$ without violating the axioms of probability, use the formula:
+
+
+$\Pr(A \cap B) = \Pr(A) + \Pr(B) - \Pr(A \cup B) = 0.4 + 0.3 - 0.5 = 0.2$
+
+
+The person must assign a degree of belief for $\Pr(A \cap B)$ between 0 and 0.2 to satisfy the axioms of probability. 
+
 
 4.	A disease D has two symptoms, pain and fever. Pain occurs in 95% of the people with D, but also in 10% of the people without D. Fever occurs in 90% of the people with D, but also in 5% of the people without D. D affects 1% of people. Which of pain or fever is a better indicator of D? 
 
